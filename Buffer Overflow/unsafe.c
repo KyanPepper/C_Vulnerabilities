@@ -3,7 +3,8 @@
 #include <stdlib.h>
 void vulnFunction(char *input) {
     char buffer[5]; //This is our buffer
-    strcpy(buffer, input);// This is a buffer overflow
+    strcpy(buffer, input);// This is a buffer -- This is the vulnerability we are exploiting
+    printf("Buffer: %s\n", buffer);
 }
 
 void debug() {
@@ -14,7 +15,7 @@ void debug() {
 int main() {
     char input[100]; //This our input buffer
     printf("Enter your name: "); 
-    scanf(&input); // This is a could be a buffer overflow
+    gets(&input); // This is a could be a buffer overflow, it does not check the size of the input
     vulnFunction(input);
     return 0;
 }
