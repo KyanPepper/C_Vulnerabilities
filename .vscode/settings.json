@@ -1,5 +1,8 @@
 {
     "cSpell.words": [
         "vuln"
-    ]
+    ],
+    "files.associations": {
+        "pthread.h": "c"
+    }
 }
