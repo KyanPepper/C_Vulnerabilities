@@ -1,0 +1,7 @@
+# Stack Overflow
+
+A stack overflow occurs when a program writes more data to the stack than it can hold. This can lead to unexpected behavior, crashes, and vulnerabilities.
+
+## Stack Overflow and DDoS
+
+Stack overflow vulnerabilities can be exploited to execute arbitrary code, which can be used to launch Distributed Denial of Service (DDoS) attacks. In a DDoS attack, multiple compromised systems are used to target a single system, causing a denial of service for users of the targeted system.
