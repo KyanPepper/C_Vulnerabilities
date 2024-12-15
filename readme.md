@@ -18,3 +18,8 @@ This repository demonstrates various C vulnerabilities and how to exploit them. 
 ## Ethical Hacking Section
 
 The ethical hacking section includes detailed videos demonstrating how to exploit and mitigate various vulnerabilities on a real server.
+
+
+#Video Links
+
+https://youtu.be/IqAfmeKDbzs
