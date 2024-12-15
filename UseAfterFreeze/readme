@@ -1,0 +1,20 @@
+# Use After Free Vulnerability
+
+## Overview
+
+A "Use After Free" (UAF) vulnerability occurs when a program continues to use a pointer after it has been freed. This can lead to undefined behavior, including crashes, data corruption, and security vulnerabilities. UAF vulnerabilities are a common type of memory corruption issue in C and C++ programs.
+
+## How It Happens
+
+1. **Memory Allocation**: Memory is allocated dynamically using functions like `malloc` or `new`.
+2. **Memory Deallocation**: The allocated memory is freed using functions like `free` or `delete`.
+3. **Dangling Pointer**: The pointer that was pointing to the freed memory is not set to `NULL` or reassigned.
+4. **Use After Free**: The program continues to use the dangling pointer, leading to potential exploitation.
+
+## Mitigations
+
+To prevent Use After Free vulnerabilities, consider the following best practices:
+
+1. **Nullify Pointers**: Set pointers to `NULL` after freeing memory to avoid dangling pointers.
+2. **Avoid Double Free**: Ensure that memory is not freed more than once to prevent use after free.
+3. **Null Checking**: Check pointers for `NULL` before dereferencing them to avoid accessing freed memory.

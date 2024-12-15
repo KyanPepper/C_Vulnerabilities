@@ -4,7 +4,7 @@
 int shared_variable = 0;  // Shared global variable
 pthread_mutex_t lock;     // Declare a mutex
 
-void* increment() {
+void* increment(void* arg) {
     for (int i = 0; i < 1000000; i++) {
         pthread_mutex_lock(&lock);   // Acquire the mutex
         shared_variable++;           // Critical section
@@ -13,7 +13,7 @@ void* increment() {
     return NULL;
 }
 
-void* decrement() {
+void* decrement(void* arg) {
     for (int i = 0; i < 1000000; i++) {
         pthread_mutex_lock(&lock);   // Acquire the mutex
         shared_variable--;           // Critical section

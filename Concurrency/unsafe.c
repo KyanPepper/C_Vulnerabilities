@@ -3,14 +3,14 @@
 
 int shared_variable = 0;  // Shared global variable
 
-void* increment() {
+void* increment(void* arg) {
     for (int i = 0; i < 1000000; i++) {
         shared_variable++;  // Increment shared variable
     }
     return NULL;
 }
 
-void* decrement() {
+void* decrement(void* arg) {
     for (int i = 0; i < 1000000; i++) {
         shared_variable--;  // Decrement shared variable
     }
